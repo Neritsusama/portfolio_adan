@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marie Dupont — Communication</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700;900&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Curseur personnalisé -->
+  <div id="cursor"></div>
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="loader-word">
+      <span>M</span><span>.</span><span>D</span>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#" class="nav-logo" id="nav-home">Marie Dupont</a>
+    <div class="nav-right">
+      <button class="nav-link" id="nb-int">Interviews</button>
+      <button class="nav-link" id="nb-vlog">Vlogs</button>
+      <button class="nav-link" id="nb-ct">Contact</button>
+      <span class="nav-avail">Disponible</span>
+    </div>
+  </nav>
+
+  <!-- PAGE : Accueil -->
+  <div id="home">
+    <div class="hero-big">
+      <span class="line"><span class="word d1">Marie</span></span>
+      <span class="line">
+        <span class="word d2 acc">Du</span><span class="word d2">pont</span>
+      </span>
+      <span class="line">
+        <span class="word d3 hero-sub">Communication</span>
+      </span>
+    </div>
+    <div class="hero-bottom">
+      <p class="hero-desc">
+        Étudiante en communication basée à Bruxelles — je donne la parole
+        à ceux qui ont quelque chose à dire, à travers interviews, vlogs
+        et projets éditoriaux.
+      </p>
+      <div class="hero-tags">
+        <span class="hero-tag">Interviews</span>
+        <span class="hero-tag">Vlogs</span>
+        <span class="hero-tag">Storytelling</span>
+        <span class="hero-tag">Bruxelles</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE : Interviews -->
+  <div id="interviews-sec" class="section">
+    <div class="s-eyebrow">Interviews</div>
+    <div class="s-big">Conversations</div>
+    <table class="int-table">
+      <thead>
+        <tr>
+          <th style="width:60px;">#</th>
+          <th>Invité·e</th>
+          <th>Sujet</th>
+          <th>Thème</th>
+          <th style="text-align:right;">Durée</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="int-row">
+          <td class="int-num">001</td>
+          <td class="int-guest">Leila Benali</td>
+          <td class="int-topic">Activisme climatique &amp; communication engagée</td>
+          <td><span class="int-cat g">Environnement</span></td>
+          <td class="int-dur">32'</td>
+        </tr>
+        <tr class="int-row">
+          <td class="int-num">002</td>
+          <td class="int-guest">Thomas Krebs</td>
+          <td class="int-topic">Bâtir une marque personnelle à l'ère des réseaux</td>
+          <td><span class="int-cat y">Personal branding</span></td>
+          <td class="int-dur">45'</td>
+        </tr>
+        <tr class="int-row">
+          <td class="int-num">003</td>
+          <td class="int-guest">Amara Diallo</td>
+          <td class="int-topic">Journalism de solutions — narrer l'espoir</td>
+          <td><span class="int-cat r">Médias</span></td>
+          <td class="int-dur">28'</td>
+        </tr>
+        <tr class="int-row">
+          <td class="int-num">004</td>
+          <td class="int-guest">Sofia Marchetti</td>
+          <td class="int-topic">Communication de crise — quand tout s'emballe</td>
+          <td><span class="int-cat y">Stratégie</span></td>
+          <td class="int-dur">38'</td>
+        </tr>
+        <tr class="int-row">
+          <td class="int-num">005</td>
+          <td class="int-guest">Yohan Park</td>
+          <td class="int-topic">Créer une communauté en ligne authentique</td>
+          <td><span class="int-cat g">Digital</span></td>
+          <td class="int-dur">41'</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- PAGE : Vlogs -->
+  <div id="vlogs-sec" class="section">
+    <div class="s-eyebrow">Vlogs</div>
+    <div class="s-big">En coulisses</div>
+    <div class="vlogs-list">
+
+      <div class="vlog-row">
+        <div class="vlog-ep-num">01</div>
+        <div class="vlog-info">
+          <div class="vlog-title">Une semaine en agence de comm</div>
+          <div class="vlog-sub">Bruxelles · Behind the scenes</div>
+        </div>
+        <div class="vlog-dur">12'</div>
+        <div class="vlog-play">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
+            <polygon points="3,1 13,7 3,13"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="vlog-row">
+        <div class="vlog-ep-num">02</div>
+        <div class="vlog-info">
+          <div class="vlog-title">Mon premier dossier de presse</div>
+          <div class="vlog-sub">Processus · Apprentissage</div>
+        </div>
+        <div class="vlog-dur">9'</div>
+        <div class="vlog-play">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
+            <polygon points="3,1 13,7 3,13"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="vlog-row">
+        <div class="vlog-ep-num">03</div>
+        <div class="vlog-info">
+          <div class="vlog-title">Pourquoi j'ai choisi la comm</div>
+          <div class="vlog-sub">Talk personnel · Réflexion</div>
+        </div>
+        <div class="vlog-dur">7'</div>
+        <div class="vlog-play">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
+            <polygon points="3,1 13,7 3,13"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="vlog-row">
+        <div class="vlog-ep-num">04</div>
+        <div class="vlog-info">
+          <div class="vlog-title">Festival &amp; couverture médias — coulisses</div>
+          <div class="vlog-sub">Événementiel · Live</div>
+        </div>
+        <div class="vlog-dur">15'</div>
+        <div class="vlog-play">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
+            <polygon points="3,1 13,7 3,13"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="vlog-row">
+        <div class="vlog-ep-num">05</div>
+        <div class="vlog-info">
+          <div class="vlog-title">Comment je prépare une interview</div>
+          <div class="vlog-sub">Méthode · Outil</div>
+        </div>
+        <div class="vlog-dur">11'</div>
+        <div class="vlog-play">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
+            <polygon points="3,1 13,7 3,13"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="vlog-row">
+        <div class="vlog-ep-num">06</div>
+        <div class="vlog-info">
+          <div class="vlog-title">Bilan de fin d'année — ce que j'ai appris</div>
+          <div class="vlog-sub">Rétrospective · 2024</div>
+        </div>
+        <div class="vlog-dur">18'</div>
+        <div class="vlog-play">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
+            <polygon points="3,1 13,7 3,13"/>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PAGE : Contact -->
+  <div id="contact-sec" class="section">
+    <div class="contact-huge">
+      <span>On</span>
+      <span>parle</span>
+      <span class="acc">?</span>
+    </div>
+    <div class="contact-grid">
+      <a class="contact-col" href="https://instagram.com/marie.dupont" target="_blank" rel="noopener">
+        <div class="cc-platform">Instagram</div>
+        <div class="cc-handle">@marie.dupont</div>
+        <div class="cc-arrow">↗</div>
+      </a>
+      <a class="contact-col" href="https://youtube.com/@mariedupont" target="_blank" rel="noopener">
+        <div class="cc-platform">YouTube</div>
+        <div class="cc-handle">Marie Dupont</div>
+        <div class="cc-arrow">↗</div>
+      </a>
+      <a class="contact-col" href="mailto:marie@email.com">
+        <div class="cc-platform">Email</div>
+        <div class="cc-handle">marie@email.com</div>
+        <div class="cc-arrow">↗</div>
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
