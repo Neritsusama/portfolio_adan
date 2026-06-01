@@ -280,93 +280,115 @@ nav {
   line-height: 1;
 }
 
-/* ── INTERVIEWS ── */
-.int-table {
-  width: 100%;
-  border-collapse: collapse;
+/* ── INTERVIEWS (cartes cliquables) ── */
+.int-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
-.int-table thead tr {
-  border-bottom: 0.5px solid var(--muted);
+.int-card {
+  display: grid;
+  grid-template-columns: 70px 1fr 40px;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-bottom: 0.5px solid #1A1A1A;
+  text-decoration: none;
+  cursor: none;
+  position: relative;
+  overflow: hidden;
+  transition: padding-left 0.35s cubic-bezier(.23,1,.32,1);
 }
 
-.int-table thead th {
+.int-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  height: 0.5px; width: 0;
+  background: var(--accent);
+  transition: width 0.4s cubic-bezier(.23,1,.32,1);
+}
+
+.int-card:hover { padding-left: 1rem; }
+.int-card:hover::before { width: 100%; }
+.int-card:hover .int-card-num { color: var(--accent); }
+.int-card:hover .int-card-title { color: var(--accent); }
+.int-card:hover .int-card-arrow { color: var(--accent); transform: translateX(4px) translateY(-4px); }
+
+.int-card-num {
+  font-family: var(--unbounded);
+  font-size: 2rem;
+  font-weight: 900;
+  color: #1E1E1E;
+  line-height: 1;
+  transition: color 0.25s;
+}
+
+.int-card-tag {
   font-size: 0.62rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--muted);
-  font-weight: 400;
-  padding: 0 0 1rem;
-  text-align: left;
-  font-family: var(--body);
+  color: var(--mid);
+  margin-bottom: 0.5rem;
 }
 
-.int-table thead th:last-child {
-  text-align: right;
-}
-
-.int-row {
-  border-bottom: 0.5px solid #1A1A1A;
-  cursor: none;
-  transition: background 0.2s;
-}
-
-.int-row td {
-  padding: 1.6rem 0;
-  vertical-align: middle;
-}
-
-.int-row:hover {
-  background: #111;
-}
-
-.int-row:hover .int-guest {
-  color: var(--accent);
-}
-
-.int-num {
+.int-card-title {
   font-family: var(--unbounded);
-  font-size: 0.7rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--fg);
+  letter-spacing: 0.01em;
+  margin-bottom: 0.35rem;
+  transition: color 0.25s;
+}
+
+.int-card-sub {
+  font-size: 0.82rem;
   color: var(--muted);
-  width: 60px;
   font-weight: 300;
 }
 
-.int-guest {
+.int-card-arrow {
+  font-size: 1.4rem;
+  color: var(--muted);
+  text-align: right;
+  transition: color 0.25s, transform 0.25s;
+}
+
+/* ── VLOGS — BIENTÔT ── */
+.soon-wrap {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.soon-line {
+  flex: 1;
+  height: 0.5px;
+  background: var(--muted);
+}
+
+.soon-text {
   font-family: var(--unbounded);
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
-  transition: color 0.2s;
-}
-
-.int-topic {
-  font-size: 0.82rem;
-  color: var(--mid);
-  padding-left: 1.5rem;
-  max-width: 32ch;
-}
-
-.int-cat {
-  font-size: 0.62rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 0.3rem 0.7rem;
-  border: 0.5px solid;
+  letter-spacing: 0.04em;
+  color: var(--accent);
   white-space: nowrap;
 }
 
-.int-cat.g { border-color: #4AB8A0; color: #4AB8A0; }
-.int-cat.y { border-color: var(--accent); color: var(--accent); }
-.int-cat.r { border-color: #E05C3A; color: #E05C3A; }
-
-.int-dur {
-  font-size: 0.72rem;
+.soon-sub {
+  font-size: 0.9rem;
   color: var(--muted);
-  text-align: right;
-  font-family: var(--unbounded);
   font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
 }
 
 /* ── VLOGS ── */
@@ -549,8 +571,8 @@ nav {
   .nav-avail { display: none; }
   #home, .section { padding-left: 1.5rem; padding-right: 1.5rem; }
 
-  .int-topic { display: none; }
-  .int-table thead th:nth-child(3) { display: none; }
+  .int-card { grid-template-columns: 50px 1fr 30px; gap: 1rem; }
+  .int-card-title { font-size: 1rem; }
 
   .vlog-row { grid-template-columns: 50px 1fr auto; gap: 1rem; }
   .vlog-dur { display: none; }
