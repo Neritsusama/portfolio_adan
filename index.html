@@ -4,9 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adan Pereira Alves</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700;900&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=sentient@400,401,500,501,700,701&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -22,10 +21,9 @@
   <nav>
     <a href="#" class="nav-logo" id="nav-home">Adan Pereira Alves</a>
     <div class="nav-right">
-      <button class="nav-link" id="nb-int">Interviews</button>
       <button class="nav-link" id="nb-vlog">Vlogs</button>
       <button class="nav-link" id="nb-ct">Contact</button>
-      <span class="nav-avail">Disponible</span>
+      <button class="nav-link" id="nb-int">Interviews</button>
     </div>
   </nav>
 
@@ -34,19 +32,49 @@
     <div class="hero-big">
       <span class="line"><span class="word d1">Étudiant en</span></span>
       <span class="line"><span class="word d2 acc">Comm</span><span class="word d2">unication</span></span>
-      <span class="line"><span class="word d3 hero-sub">Bruxelles — Interviews &amp; Vlogs</span></span>
+      <span class="line"><span class="word d3 hero-sub">
+        <span class="hero-loc">Bruxelles</span>
+        <span class="hero-tags">
+          <span class="hero-tag">Interviews</span>
+          <span class="hero-tag">Sports</span>
+          <span class="hero-tag">Vlogs</span>
+        </span>
+      </span></span>
     </div>
-    <div class="hero-bottom">
-      <p class="hero-desc">
-        Je donne la parole à ceux qui ont quelque chose à dire —
-        des rappeurs, des créateurs, des voix qui comptent.
-      </p>
-      <div class="hero-tags">
-        <span class="hero-tag">Interviews</span>
-        <span class="hero-tag">Rap</span>
-        <span class="hero-tag">Vlogs</span>
-        <span class="hero-tag">Bruxelles</span>
-      </div>
+
+    <div class="home-grid">
+      <a class="grid-cell video-cell" href="https://www.youtube.com/watch?v=nSRCPKZPShM&t=33s" target="_blank" rel="noopener">
+        <img src="https://img.youtube.com/vi/nSRCPKZPShM/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/nSRCPKZPShM/hqdefault.jpg'" alt="Interview Rappeur #1" />
+        <div class="grid-cell-overlay">
+          <span class="grid-cell-tag">Rap · Interview</span>
+          <span class="grid-cell-title">Interview Godson</span>
+        </div>
+        <span class="grid-cell-play">▶</span>
+      </a>
+
+      <a class="grid-cell video-cell" href="https://www.youtube.com/watch?v=E9GmyZ_D45c" target="_blank" rel="noopener">
+        <img src="https://img.youtube.com/vi/E9GmyZ_D45c/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/E9GmyZ_D45c/hqdefault.jpg'" alt="Interview Rappeur #2" />
+        <div class="grid-cell-overlay">
+          <span class="grid-cell-tag">Rap · Interview</span>
+          <span class="grid-cell-title">Interview bakari</span>
+        </div>
+        <span class="grid-cell-play">▶</span>
+      </a>
+
+      <a class="grid-cell video-cell" href="https://www.youtube.com/watch?v=HuoTQjdssMU" target="_blank" rel="noopener">
+        <img src="https://img.youtube.com/vi/HuoTQjdssMU/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/HuoTQjdssMU/hqdefault.jpg'" alt="Interview Rappeur #3" />
+        <div class="grid-cell-overlay">
+          <span class="grid-cell-tag">Rap · Interview</span>
+          <span class="grid-cell-title">Interview aketo & monarch</span>
+        </div>
+        <span class="grid-cell-play">▶</span>
+      </a>
+
+      <button class="grid-cell all-cell" id="grid-all-int">
+        <span class="all-cell-num">04</span>
+        <span class="all-cell-text">Toutes les<br>interviews</span>
+        <span class="all-cell-arrow">↗</span>
+      </button>
     </div>
   </div>
 
@@ -60,8 +88,8 @@
         <div class="int-card-num">001</div>
         <div class="int-card-body">
           <div class="int-card-tag">Rap · Interview</div>
-          <div class="int-card-title">Interview Rappeur #1</div>
-          <div class="int-card-sub">Remplace par le vrai nom de l'artiste</div>
+          <div class="int-card-title">Interview Godson</div>
+          <div class="int-card-sub">Godson</div>
         </div>
         <div class="int-card-arrow">↗</div>
       </a>
@@ -70,8 +98,8 @@
         <div class="int-card-num">002</div>
         <div class="int-card-body">
           <div class="int-card-tag">Rap · Interview</div>
-          <div class="int-card-title">Interview Rappeur #2</div>
-          <div class="int-card-sub">Remplace par le vrai nom de l'artiste</div>
+          <div class="int-card-title">Interview bakari</div>
+          <div class="int-card-sub">bakari</div>
         </div>
         <div class="int-card-arrow">↗</div>
       </a>
@@ -80,8 +108,8 @@
         <div class="int-card-num">003</div>
         <div class="int-card-body">
           <div class="int-card-tag">Rap · Interview</div>
-          <div class="int-card-title">Interview Rappeur #3</div>
-          <div class="int-card-sub">Remplace par le vrai nom de l'artiste</div>
+          <div class="int-card-title">Interview aketo & monarch</div>
+          <div class="int-card-sub">aketo & monarch</div>
         </div>
         <div class="int-card-arrow">↗</div>
       </a>
@@ -119,9 +147,9 @@
         <div class="cc-handle">Adan Pereira Alves</div>
         <div class="cc-arrow">↗</div>
       </a>
-      <a class="contact-col" href="mailto:adanpereiraalves@gmail.com">
+      <a class="contact-col" href="mailto:adan.pereira.alves@gmail.com">
         <div class="cc-platform">Email</div>
-        <div class="cc-handle">adanpereiraalves@gmail.com</div>
+        <div class="cc-handle">adan.pereira.alves@gmail.com</div>
         <div class="cc-arrow">↗</div>
       </a>
     </div>

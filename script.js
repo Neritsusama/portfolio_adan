@@ -1,7 +1,4 @@
-/* ═══════════════════════════════════════
-   PORTFOLIO — Marie Dupont
-   script.js
-═══════════════════════════════════════ */
+
 
 /* ── CURSEUR PERSONNALISÉ ── */
 const cursor = document.getElementById('cursor');
@@ -12,7 +9,7 @@ document.addEventListener('mousemove', e => {
 });
 
 // Grossit le curseur sur les éléments interactifs
-document.querySelectorAll('a, button, .int-row, .vlog-row, .contact-col').forEach(el => {
+document.querySelectorAll('a, button, .int-row, .int-card, .vlog-row, .contact-col, .grid-cell').forEach(el => {
   el.addEventListener('mouseenter', () => cursor.classList.add('big'));
   el.addEventListener('mouseleave', () => cursor.classList.remove('big'));
 });
@@ -84,6 +81,12 @@ document.getElementById('nav-home').addEventListener('click', e => {
 document.getElementById('nb-int').addEventListener('click',  () => showSection('interviews-sec'));
 document.getElementById('nb-vlog').addEventListener('click', () => showSection('vlogs-sec'));
 document.getElementById('nb-ct').addEventListener('click',   () => showSection('contact-sec'));
+
+// Tuile "Toutes les interviews" de la grille d'accueil
+const gridAllInt = document.getElementById('grid-all-int');
+if (gridAllInt) {
+  gridAllInt.addEventListener('click', () => showSection('interviews-sec'));
+}
 
 /* ── ÉTAT INITIAL ── */
 // S'assure que seule la page d'accueil est visible au chargement
