@@ -489,17 +489,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   flex: none;
 }
 
-.hero-pause {
-  min-height: 44px;
-  font-size: .75rem;
-  font-weight: 500;
-  letter-spacing: .07em;
-  text-transform: uppercase;
-  opacity: .85;
-  transition: opacity .2s;
-}
-.hero-pause:hover { opacity: 1; }
-
 /* Séquence d'ouverture : la seule animation « spectacle » du site */
 @keyframes rise   { from { transform: translateY(105%); } to { transform: none; } }
 @keyframes reveal { from { opacity: 0; } to { opacity: 1; } }
@@ -516,8 +505,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .tiles {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--gap);
-  margin-top: var(--gap);
+  gap: 0;
+  margin-top: 0;
 }
 
 .tile {
@@ -598,7 +587,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   justify-content: flex-end;
   gap: 1.25rem;
   min-height: clamp(300px, 46vh, 520px);
-  margin-top: var(--gap);
+  margin-top: 0;
   padding: var(--gutter);
   color: #fff;
   background: var(--ink);

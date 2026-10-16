@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════════════════════════
    Adan Pereira Alves — script.js
    navigation par hash · header transparent puis plein · méga-menu ·
-   menu mobile · hero (diaporama avec Pause) · vignettes YouTube
+   menu mobile · hero (diaporama) · vignettes YouTube
    ═══════════════════════════════════════════════════════════════ */
 (() => {
   'use strict';
@@ -150,11 +150,11 @@
   const slides    = $$('.hero-slide');
   const heroLink  = $('#hero-link');
   const heroLabel = $('.t', heroLink);
-  const heroBtn   = $('#hero-pause');
 
   let slideIndex = 0;
   let slideTimer = null;
-  let userPaused = reduceMotion.matches;
+  // Pas de bouton Pause : le diaporama défile seul (sauf « mouvement réduit » dans l'OS)
+  const userPaused = reduceMotion.matches;
 
   function showSlide(i) {
     slideIndex = (i + slides.length) % slides.length;
@@ -173,22 +173,10 @@
     slideTimer = null;
   }
 
-  function renderHeroBtn() {
-    heroBtn.textContent = userPaused ? 'Lecture' : 'Pause';
-  }
-
-  heroBtn.addEventListener('click', () => {
-    userPaused = !userPaused;
-    renderHeroBtn();
-    userPaused ? heroStop() : heroPlay();
-  });
-
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) heroStop();
     else if (body.dataset.page === 'home') heroPlay();
   });
-
-  renderHeroBtn();
 
 
   /* ── 7. NAVIGATION ────────────────────────────────────────────────
@@ -197,7 +185,7 @@
   const PAGES = {
     home:       'Adan Pereira Alves',
     interviews: 'Interviews | Adan Pereira Alves',
-    vlogs:      'Vlogs | Adan Pereira Alves',
+    vlogs:      'Vidéos | Adan Pereira Alves',
     contact:    'Contact | Adan Pereira Alves',
   };
 
