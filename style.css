@@ -646,24 +646,39 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 
 
-/* ── 11. VLOGS ────────────────────────────────────────────────── */
-.empty {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  padding: clamp(3rem, 12vw, 9rem) var(--gutter);
-  text-align: center;
+/* ── 11. VIDÉOS (réels Instagram intégrés) ────────────────────── */
+.reels {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2.5rem var(--gutter);
+  padding: 0 var(--gutter);
 }
-.empty-title {
-  font-size: clamp(1.75rem, 4.4vw, 4rem);
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: -.03em;
-  text-transform: uppercase;
+
+.reel { display: flex; flex-direction: column; gap: 1rem; }
+
+/* Cadre vertical ; le fond bleu s'affiche pendant le chargement */
+.reel-frame {
+  aspect-ratio: 9 / 18;
+  background: var(--ink);
+  overflow: hidden;
 }
-.empty p { color: var(--mute); }
-.empty .link { margin-top: 1rem; color: var(--ink); }
+.reel-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: var(--paper);
+}
+
+.reel-link { align-self: flex-start; }
+
+@media (max-width: 1199px) {
+  .reels { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 599px) {
+  .reels { grid-template-columns: 1fr; }
+  .reel-frame { aspect-ratio: 9 / 17; }
+}
 
 
 /* ── 12. CONTACT (liste type « service client ») ──────────────── */
