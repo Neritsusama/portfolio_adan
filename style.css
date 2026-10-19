@@ -647,14 +647,27 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 
 /* ── 11. VIDÉOS (réels Instagram intégrés) ────────────────────── */
+/* Rangée horizontale, alignée à gauche, qu'on fait défiler sur les petits écrans */
 .reels {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 2.5rem var(--gutter);
-  padding: 0 var(--gutter);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gutter);
+  padding: 0 var(--gutter) 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: var(--gutter);
+  -webkit-overflow-scrolling: touch;
 }
 
-.reel { display: flex; flex-direction: column; gap: 1rem; }
+/* 326 px = largeur minimale de l'intégration Instagram (en dessous, elle se décale) */
+.reel {
+  flex: 0 0 clamp(326px, 24vw, 380px);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  scroll-snap-align: start;
+}
 
 /* Cadre vertical ; le fond bleu s'affiche pendant le chargement */
 .reel-frame {
@@ -672,11 +685,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 .reel-link { align-self: flex-start; }
 
-@media (max-width: 1199px) {
-  .reels { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
 @media (max-width: 599px) {
-  .reels { grid-template-columns: 1fr; }
+  .reel { flex-basis: min(max(86vw, 326px), 380px); }
   .reel-frame { aspect-ratio: 9 / 17; }
 }
 
@@ -774,6 +784,13 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   font-size: .8125rem;
   color: var(--mute);
   border-top: 1px solid var(--line);
+}
+.footer-base .credit:hover,
+.footer-base .credit:focus-visible {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .3em;
 }
 
 
